@@ -1,0 +1,11 @@
+{
+  "allow": ["MIT", "ISC", "Apache-2.0", "BSD-2-Clause", "BSD-3-Clause", "0BSD", "Unlicense", "CC0-1.0"],
+  "deny": ["AGPL-3.0-only", "AGPL-3.0-or-later", "SSPL-1.0"],
+  "failOn": ["copyleft", "network-copyleft", "proprietary"],
+  "unknownSeverity": "warning",
+  "includeDev": false,
+  "minScore": 80,
+  "exclude": [],
+  "overrides": {},
+  "ruleSeverity": {}
+}

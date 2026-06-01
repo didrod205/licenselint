@@ -1,0 +1,12 @@
+# Ignore the project's own node_modules, but KEEP the example fixture tree
+# (examples/sample-project/node_modules is intentionally committed for demos/tests).
+/node_modules/
+dist/
+*.log
+.DS_Store
+coverage/
+.env
+.env.*
+*.tsbuildinfo
+.idea/
+.vscode/

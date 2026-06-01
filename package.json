@@ -1,0 +1,73 @@
+{
+  "name": "@didrod2539/licenselint",
+  "version": "0.1.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "description": "Audit your dependency tree's open-source licenses locally: classify permissive/copyleft/network-copyleft/proprietary/unknown, enforce an allow/deny policy, and generate a CycloneDX SBOM + third-party notices. Deterministic CLI, no code uploaded.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "bin": {
+    "licenselint": "./dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "lint": "tsc --noEmit",
+    "example": "node dist/cli.js scan examples/sample-project",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "license",
+    "license-checker",
+    "oss-compliance",
+    "sbom",
+    "spdx",
+    "license-audit",
+    "dependency-license",
+    "gpl-checker",
+    "copyleft",
+    "cyclonedx",
+    "third-party-notices",
+    "supply-chain",
+    "cli",
+    "typescript"
+  ],
+  "author": "didrod205 (https://github.com/didrod205)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/didrod205/licenselint.git"
+  },
+  "bugs": {
+    "url": "https://github.com/didrod205/licenselint/issues"
+  },
+  "homepage": "https://github.com/didrod205/licenselint#readme",
+  "dependencies": {
+    "cac": "^6.7.14",
+    "picocolors": "^1.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  }
+}

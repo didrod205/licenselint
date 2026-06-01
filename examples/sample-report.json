@@ -1,0 +1,238 @@
+{
+  "tool": "licenselint",
+  "version": "0.1.0",
+  "generatedAt": "2026-06-01T03:49:33.065Z",
+  "summary": {
+    "dependencies": 8,
+    "score": 0,
+    "grade": "F",
+    "errors": 5,
+    "warnings": 1,
+    "infos": 1,
+    "byClass": [
+      {
+        "class": "permissive",
+        "label": "Permissive",
+        "count": 4
+      },
+      {
+        "class": "copyleft",
+        "label": "Copyleft",
+        "count": 2
+      },
+      {
+        "class": "network-copyleft",
+        "label": "Network copyleft",
+        "count": 1
+      },
+      {
+        "class": "unknown",
+        "label": "Unknown / unlicensed",
+        "count": 1
+      }
+    ],
+    "licenses": [
+      {
+        "id": "(none)",
+        "count": 1
+      },
+      {
+        "id": "AGPL-3.0-or-later",
+        "count": 1
+      },
+      {
+        "id": "Apache-2.0",
+        "count": 1
+      },
+      {
+        "id": "BSD-3-Clause",
+        "count": 1
+      },
+      {
+        "id": "GPL-2.0-only",
+        "count": 1
+      },
+      {
+        "id": "GPL-3.0-only",
+        "count": 1
+      },
+      {
+        "id": "MIT",
+        "count": 1
+      },
+      {
+        "id": "MIT OR Apache-2.0",
+        "count": 1
+      }
+    ]
+  },
+  "issues": [
+    {
+      "dependency": "@acme/widgets",
+      "version": "0.9.1",
+      "license": "GPL-2.0",
+      "class": "copyleft",
+      "rule": "not-allowed-license",
+      "severity": "error",
+      "message": "License \"GPL-2.0-only\" is not in the allowlist",
+      "fix": "Add \"GPL-2.0-only\" to `allow` if acceptable, or replace @acme/widgets."
+    },
+    {
+      "dependency": "@acme/widgets",
+      "version": "0.9.1",
+      "license": "GPL-2.0",
+      "class": "copyleft",
+      "rule": "copyleft-license",
+      "severity": "error",
+      "message": "@acme/widgets is copyleft (GPL-2.0)",
+      "fix": "Copyleft can require sharing derivative source — confirm with legal."
+    },
+    {
+      "dependency": "@acme/widgets",
+      "version": "0.9.1",
+      "license": "GPL-2.0",
+      "class": "copyleft",
+      "rule": "deprecated-spdx",
+      "severity": "info",
+      "message": "Deprecated SPDX id \"GPL-2.0\" (use \"GPL-2.0-only\")",
+      "fix": "Ask the maintainer to update to \"GPL-2.0-only\"."
+    },
+    {
+      "dependency": "copyleft-lib",
+      "version": "1.0.0",
+      "license": "GPL-3.0-only",
+      "class": "copyleft",
+      "rule": "not-allowed-license",
+      "severity": "error",
+      "message": "License \"GPL-3.0-only\" is not in the allowlist",
+      "fix": "Add \"GPL-3.0-only\" to `allow` if acceptable, or replace copyleft-lib."
+    },
+    {
+      "dependency": "copyleft-lib",
+      "version": "1.0.0",
+      "license": "GPL-3.0-only",
+      "class": "copyleft",
+      "rule": "copyleft-license",
+      "severity": "error",
+      "message": "copyleft-lib is copyleft (GPL-3.0-only)",
+      "fix": "Copyleft can require sharing derivative source — confirm with legal."
+    },
+    {
+      "dependency": "mystery-pkg",
+      "version": "0.5.0",
+      "license": "(none)",
+      "class": "unknown",
+      "rule": "missing-license",
+      "severity": "warning",
+      "message": "No license declared for mystery-pkg",
+      "fix": "Verify the license manually; add an override once confirmed."
+    },
+    {
+      "dependency": "network-share",
+      "version": "2.0.1",
+      "license": "AGPL-3.0-or-later",
+      "class": "network-copyleft",
+      "rule": "denied-license",
+      "severity": "error",
+      "message": "Uses denied license \"AGPL-3.0-or-later\"",
+      "fix": "Remove network-share or replace it with a differently-licensed alternative."
+    }
+  ],
+  "dependencies": [
+    {
+      "name": "@acme/widgets",
+      "version": "0.9.1",
+      "license": "GPL-2.0",
+      "licenseIds": [
+        "GPL-2.0-only"
+      ],
+      "class": "copyleft",
+      "private": false,
+      "direct": false,
+      "path": "/Users/yang/오픈소스/licenselint/examples/sample-project/node_modules/@acme/widgets"
+    },
+    {
+      "name": "copyleft-lib",
+      "version": "1.0.0",
+      "license": "GPL-3.0-only",
+      "licenseIds": [
+        "GPL-3.0-only"
+      ],
+      "class": "copyleft",
+      "private": false,
+      "direct": true,
+      "path": "/Users/yang/오픈소스/licenselint/examples/sample-project/node_modules/copyleft-lib"
+    },
+    {
+      "name": "fast-json",
+      "version": "3.1.2",
+      "license": "Apache-2.0",
+      "licenseIds": [
+        "Apache-2.0"
+      ],
+      "class": "permissive",
+      "private": false,
+      "direct": true,
+      "path": "/Users/yang/오픈소스/licenselint/examples/sample-project/node_modules/fast-json"
+    },
+    {
+      "name": "json-helper",
+      "version": "1.0.4",
+      "license": "BSD-3-Clause",
+      "licenseIds": [
+        "BSD-3-Clause"
+      ],
+      "class": "permissive",
+      "private": false,
+      "direct": false,
+      "path": "/Users/yang/오픈소스/licenselint/examples/sample-project/node_modules/fast-json/node_modules/json-helper"
+    },
+    {
+      "name": "left-pad",
+      "version": "1.3.0",
+      "license": "MIT",
+      "licenseIds": [
+        "MIT"
+      ],
+      "class": "permissive",
+      "private": false,
+      "direct": true,
+      "path": "/Users/yang/오픈소스/licenselint/examples/sample-project/node_modules/left-pad"
+    },
+    {
+      "name": "mystery-pkg",
+      "version": "0.5.0",
+      "license": "(none)",
+      "licenseIds": [],
+      "class": "unknown",
+      "private": false,
+      "direct": true,
+      "path": "/Users/yang/오픈소스/licenselint/examples/sample-project/node_modules/mystery-pkg"
+    },
+    {
+      "name": "network-share",
+      "version": "2.0.1",
+      "license": "AGPL-3.0-or-later",
+      "licenseIds": [
+        "AGPL-3.0-or-later"
+      ],
+      "class": "network-copyleft",
+      "private": false,
+      "direct": true,
+      "path": "/Users/yang/오픈소스/licenselint/examples/sample-project/node_modules/network-share"
+    },
+    {
+      "name": "tiny-http",
+      "version": "2.0.3",
+      "license": "(MIT OR Apache-2.0)",
+      "licenseIds": [
+        "MIT",
+        "Apache-2.0"
+      ],
+      "class": "permissive",
+      "private": false,
+      "direct": true,
+      "path": "/Users/yang/오픈소스/licenselint/examples/sample-project/node_modules/tiny-http"
+    }
+  ]
+}
